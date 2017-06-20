@@ -1,0 +1,27 @@
+{
+  "name": "angular-qrious",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FrankiePo/angular-qrious"
+  },
+  "author": {
+    "name": "Sergey Koshechkin",
+    "email": "serge.koshechkin@gmail.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FrankiePo/angular-qrious/issues"
+  },
+  "module": "angular-qrious.js",
+  "typings": "angular-qrious.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.2.3",
+    "rxjs": "^5.4.1",
+    "zone.js": "^0.8.12",
+    "qrious": "4.0.2"
+  }
+}
