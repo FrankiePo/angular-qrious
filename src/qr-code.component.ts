@@ -9,15 +9,15 @@ import { QRious } from 'qrious';
   templateUrl: '<canvas #qrcode></canvas>'
 })
 export class QrCodeComponent implements OnChanges, OnDestroy {
-  @Input() background: string = 'white';
-  @Input() backgroundAlpha: number = 1.0;
-  @Input() foreground: string = 'black';
-  @Input() foregroundAlpha: number = 1.0;
-  @Input() level: string = 'L';
-  @Input() mime: string = 'image/png';
-  @Input() padding: number = null;
-  @Input() size: number = 100;
-  @Input() value: string = '';
+  @Input() background = 'white';
+  @Input() backgroundAlpha = 1.0;
+  @Input() foreground = 'black';
+  @Input() foregroundAlpha = 1.0;
+  @Input() level = 'L';
+  @Input() mime = 'image/png';
+  @Input() padding = null;
+  @Input() size = 100;
+  @Input() value = '';
 
   @ViewChild('qrcode') private element: ElementRef;
   private qrcode: any;
