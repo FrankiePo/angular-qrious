@@ -19,37 +19,21 @@ $ npm install angular-qrious
 and then from your Angular `AppModule`:
 
 ```typescript
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
-
-// Import your library
+// Import library
 import { QriousModule } from 'angular-qrious';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
-    BrowserModule,
-
-    // Specify your library as an import
+    ...
     QriousModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
+Once your library is imported, you can use its component in your Angular application:
 
-```xml
-<!-- You can now use your library component in app.component.html -->
-<h1>
-  {{title}}
-</h1>
+```html
 <qr-code [value]="'Qrious'" [size]="124"></qr-code>
 ```
 
