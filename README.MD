@@ -1,4 +1,5 @@
 # angular-qrious
+![CI](https://github.com/FrankiePo/angular-qrious/workflows/CI/badge.svg?branch=master)
 
 ## DEMO
 
