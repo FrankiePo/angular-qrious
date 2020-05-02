@@ -1,6 +1,6 @@
 {
   "name": "angular-qrious",
-  "version": "0.1.0",
+  "version": "9.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/FrankiePo/angular-qrious"
@@ -10,18 +10,19 @@
     "email": "serge.koshechkin@gmail.com"
   },
   "keywords": [
-    "angular"
+    "angular",
+    "qrious",
+    "qr-code",
+    "qrcode"
   ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/FrankiePo/angular-qrious/issues"
   },
-  "module": "angular-qrious.js",
-  "typings": "angular-qrious.d.ts",
   "peerDependencies": {
-    "@angular/core": "^4.2.3",
-    "rxjs": "^5.4.1",
-    "zone.js": "^0.8.12",
+    "@angular/common": "^9.1.4",
+    "@angular/core": "^9.1.4",
+    "tslib": "^1.10.0",
     "qrious": "4.0.2"
   }
 }

@@ -1,12 +1,9 @@
-import {
-  Component, ElementRef, Input, OnChanges, OnDestroy, SimpleChanges,
-  ViewChild
-} from '@angular/core';
-import { QRious } from 'qrious';
+import { Component, ElementRef, Input, OnChanges, OnDestroy, SimpleChanges, ViewChild } from '@angular/core';
+import QRious from 'qrious';
 
 @Component({
   selector: 'qr-code',
-  templateUrl: '<canvas #qrcode></canvas>'
+  template: '<canvas #qrcode></canvas>'
 })
 export class QrCodeComponent implements OnChanges, OnDestroy {
   @Input() background = 'white';
@@ -19,8 +16,8 @@ export class QrCodeComponent implements OnChanges, OnDestroy {
   @Input() size = 100;
   @Input() value = '';
 
-  @ViewChild('qrcode') private element: ElementRef;
-  private qrcode: any;
+  @ViewChild('qrcode', {static: true}) private element: ElementRef<HTMLCanvasElement>;
+  public qrious: QRious;
 
   ngOnChanges(changes: SimpleChanges): void {
     const inputs = [
@@ -38,9 +35,11 @@ export class QrCodeComponent implements OnChanges, OnDestroy {
       this.update();
     }
   }
+
   ngOnDestroy() {
-    delete this.qrcode;
+    delete this.qrious;
   }
+
   update() {
     try {
       const config = {
@@ -55,8 +54,9 @@ export class QrCodeComponent implements OnChanges, OnDestroy {
         value: this.value,
         element: this.element.nativeElement,
       };
-      this.qrcode = new QRious(config);
+      this.qrious = new QRious(config);
     } catch (e) {
+      alert(e.message);
       console.error(`update error: ${e.message}`);
     }
   }
