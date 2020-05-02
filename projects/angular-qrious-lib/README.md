@@ -1,5 +1,9 @@
 # angular-qrious
 
+## DEMO
+
+https://stackblitz.com/edit/angular-qrious-demo
+
 ## Installation
 
 To install this library, run:
