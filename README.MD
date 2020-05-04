@@ -1,6 +1,6 @@
 # angular-qrious
 ![CI](https://github.com/FrankiePo/angular-qrious/workflows/CI/badge.svg?branch=master)
-![npm](https://img.shields.io/npm/v/angular-qrious)
+[![npm](https://img.shields.io/npm/v/angular-qrious)](https://www.npmjs.com/package/angular-qrious)
 
 ## DEMO
 
